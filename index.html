@@ -9,7 +9,7 @@ body{background:#1c1c1e;height:100vh;display:flex;align-items:center;justify-con
 #sb{position:absolute;top:0;left:0;right:0;height:44px;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:6px 30px 0;font-weight:600;font-size:15px;color:#fff;pointer-events:none}
 #sb.d{color:#000}
 #isl{position:absolute;top:10px;left:50%;width:120px;height:34px;margin-left:-60px;background:#000;border-radius:20px;z-index:60}
-#hb{position:absolute;bottom:8px;left:50%;width:140px;height:5px;margin-left:-70px;background:#fff;border-radius:3px;z-index:70;cursor:pointer}
+#hb::before{content:"";position:absolute;inset:-22px -50px}#hb{touch-action:none;position:absolute;bottom:8px;left:50%;width:140px;height:5px;margin-left:-70px;background:#fff;border-radius:3px;z-index:70;cursor:pointer}
 #hb.d{background:#000}
 .wp{position:absolute;inset:0;background:center/cover;background-color:#3a4a6b}
 .wp.b::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.25)}
@@ -23,7 +23,7 @@ body{background:#1c1c1e;height:100vh;display:flex;align-items:center;justify-con
 .pad{display:grid;grid-template-columns:repeat(3,78px);gap:16px 24px;justify-content:center}
 .pad b{width:78px;height:78px;border-radius:50%;background:rgba(255,255,255,.2);font-size:32px;font-weight:400;line-height:78px;cursor:pointer}.pad b:active{background:rgba(255,255,255,.5)}.pad b.n{background:none}
 .sh{animation:sh .4s}@keyframes sh{20%,60%{transform:translateX(-12px)}40%,80%{transform:translateX(12px)}}
-#hm{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}#hm::-webkit-scrollbar{display:none}.pg{flex:none;width:100%;scroll-snap-align:start;padding:70px 22px 0;display:grid;grid-template-columns:repeat(4,1fr);gap:22px 8px;align-content:start}
+#hm{display:flex;overflow-x:hidden;scroll-snap-type:x mandatory;scrollbar-width:none}#hm::-webkit-scrollbar{display:none}.pg{flex:none;width:100%;scroll-snap-align:start;padding:70px 22px 0;display:grid;grid-template-columns:repeat(4,1fr);gap:22px 8px;align-content:start}
 .ic{text-align:center;color:#fff;font-size:11px;cursor:pointer}.ic div{width:62px;height:62px;border-radius:15px;margin:0 auto 5px;font-size:32px;line-height:62px;box-shadow:0 2px 6px rgba(0,0,0,.3)}
 #dk{position:absolute;bottom:22px;left:12px;right:12px;height:92px;border-radius:34px;background:rgba(255,255,255,.28);backdrop-filter:blur(25px);display:grid;grid-template-columns:repeat(4,1fr);align-items:center;padding:0 10px}
 #ap{background:#fff;display:flex;flex-direction:column;padding-top:46px;animation:up .25s}@keyframes up{from{transform:scale(.8);opacity:0}}
@@ -45,14 +45,14 @@ body{background:#1c1c1e;height:100vh;display:flex;align-items:center;justify-con
 .ev{padding:8px 16px;border-left:4px solid #ff3b30;margin:8px 16px;background:#f5f5f7;border-radius:6px}.ev small{color:#666;display:block}
 .dot{width:10px;height:10px;border-radius:50%;background:#007aff;flex:none}
 .nv{padding:14px}.nv h3{margin:14px 0 8px;color:#03c75a}.nv p{padding:9px 0;border-bottom:1px solid #eee}
-.inb{position:sticky;bottom:0;display:flex;gap:8px;padding:8px;background:#f7f7f7;border-top:1px solid #ddd}.inb input{flex:1;border:1px solid #ccc;border-radius:18px;padding:8px 12px;font-size:15px}.inb button{border:0;background:#07c160;color:#fff;border-radius:18px;padding:0 16px}.m span img{max-width:180px;border-radius:8px;display:block}.ac{display:flex;gap:16px;font-size:20px;padding:8px 14px 0;cursor:pointer}.pb .ac{padding:6px 0 0;font-size:14px;color:#576b95}.ac .on{color:#ff3b30}.cl{padding:2px 14px;font-size:14px}.pb .cl{padding:2px 0;background:#f3f3f5;margin-top:2px}.ci{display:flex;gap:6px;padding:6px 14px}.pb .ci{padding:6px 0}.ci input{flex:1;border:1px solid #ccc;border-radius:16px;padding:6px 10px}.ci button{border:0;background:#007aff;color:#fff;border-radius:16px;padding:0 12px}.tb{position:sticky;bottom:0;margin-bottom:-40px;padding-bottom:26px}.nm{font-size:12px;color:#444;margin:0 0 3px 2px;display:block}.m>div{display:flex;flex-direction:column;max-width:72%;align-items:flex-start}.m>div span{max-width:100%}.kav,.kk .av{border-radius:17px!important}.nb{padding:14px 18px;border-bottom:1px solid #eee;white-space:pre-line;line-height:1.6}
+.inb{display:flex;gap:8px;padding:8px 8px 26px;background:#f7f7f7;border-top:1px solid #ddd}.inb input{flex:1;border:1px solid #ccc;border-radius:18px;padding:8px 12px;font-size:15px}.inb button{border:0;background:#07c160;color:#fff;border-radius:18px;padding:0 16px}.m span img{max-width:180px;border-radius:8px;display:block}.ac{display:flex;gap:16px;font-size:20px;padding:8px 14px 0;cursor:pointer}.pb .ac{padding:6px 0 0;font-size:14px;color:#576b95}.ac .on{color:#ff3b30}.cl{padding:2px 14px;font-size:14px}.pb .cl{padding:2px 0;background:#f3f3f5;margin-top:2px}.ci{display:flex;gap:6px;padding:6px 14px}.pb .ci{padding:6px 0}.ci input{flex:1;border:1px solid #ccc;border-radius:16px;padding:6px 10px}.ci button{border:0;background:#007aff;color:#fff;border-radius:16px;padding:0 12px}.tb{padding-bottom:26px}.nm{font-size:12px;color:#444;margin:0 0 3px 2px;display:block}.m>div{display:flex;flex-direction:column;max-width:72%;align-items:flex-start}.m>div span{max-width:100%}.kav,.kk .av{border-radius:17px!important}.pb .cl,.pb .cl b{color:#576b95;font-size:16px;background:none}.pb .ac{font-size:16px}.nb{padding:14px 18px;border-bottom:1px solid #eee;white-space:pre-line;line-height:1.6}
 </style></head><body><div id="ph">
 <div id="sb"><span id="sbt">21:41</span><span style="display:flex;align-items:center;gap:5px"><svg width="18" height="12" viewBox="0 0 18 12" fill="currentColor"><rect y="8" width="3" height="4" rx="1"/><rect x="5" y="5.5" width="3" height="6.5" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/><rect x="15" width="3" height="12" rx="1"/></svg><b style="font-size:15px">5G</b><svg width="27" height="13" viewBox="0 0 27 13" fill="currentColor"><rect x=".5" y=".5" width="23" height="12" rx="3.8" fill="none" stroke="currentColor" opacity=".4"/><rect x="2" y="2" width="20" height="9" rx="2.5"/><path d="M25 4.5v4c.9-.3 1.6-1.1 1.6-2s-.7-1.7-1.6-2z" opacity=".5"/></svg></span></div><div id="isl"></div>
 <div id="lkS" class="scr"><div class="wp b" id="w1"></div><div id="lk" class="scr" style="background:none"><div class="dt">11月16日 星期一</div><div class="tm" id="tm">21:41</div>
 <div class="nt"><div>📞 <b>妈妈</b> 2个未接来电</div><div>💬 <b>微信 · 妈妈</b><br>女儿，你是不是有什么事瞒着妈妈？你爸爸都和我说了。</div></div><div class="sw">点击屏幕解锁 ⌃</div></div>
 <div id="pc" class="scr hid"><div>输入密码</div><div class="dots" id="ds"><i></i><i></i><i></i><i></i></div><div class="pad" id="pd"></div></div></div>
 <div id="hmS" class="scr hid"><div class="wp b" id="w2"></div><div id="hm" class="scr" style="background:none"></div><div id="pgd" style="position:absolute;bottom:122px;width:100%;text-align:center;color:#fff;font-size:10px"><i style="font-style:normal">●</i> <i style="font-style:normal;opacity:.4">●</i></div><div id="dk"></div></div>
-<div id="ap" class="scr hid"><div id="ah"></div><div id="ab"></div></div><div id="zm" class="scr hid" style="background:rgba(0,0,0,.92);z-index:80;display:flex;align-items:center;justify-content:center"><img style="max-width:100%;max-height:100%"></div><div id="sv" class="scr hid" style="z-index:85;background:#111;flex-direction:column"></div><div id="hb"></div></div>
+<div id="ap" class="scr hid"><div id="ah"></div><div id="ab"></div><div id="bt" style="flex:none"></div></div><div id="zm" class="scr hid" style="background:rgba(0,0,0,.92);z-index:80;display:flex;align-items:center;justify-content:center"><img style="max-width:100%;max-height:100%"></div><div id="sv" class="scr hid" style="z-index:85;background:#111;flex-direction:column"></div><div id="hb"></div></div>
 <script>
 const PASS="0913",W="https://img.naixiai.cn/2026/",$=s=>document.querySelector(s);
 const KD="data:image/svg+xml,"+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#c9ced8"/><circle cx="50" cy="40" r="17" fill="#fff"/><path d="M18 100c0-22 14-34 32-34s32 12 32 34z" fill="#fff"/></svg>');
@@ -61,7 +61,7 @@ const WP="10/30/IMG_5383.jpeg";
 $("#w1").style.backgroundImage=$("#w2").style.backgroundImage=`url(${W+WP})`;
 setInterval(tick=()=>{const d=new Date(),t=String(d.getHours()).padStart(2,"0")+":"+String(d.getMinutes()).padStart(2,"0");$("#tm").textContent=$("#sbt").textContent=t},1000);tick();
 /* ===== 数据区：在这里改内容 ===== */
-const chat=(s,a,n)=>s.trim().split("\n").map(l=>{const c=l[0],t=l.slice(1),sp=`<span>${t}</span>`;return c=="#"?`<div class=tm>${t}</div>`:c=="!"?`<div class="m me"><span style="padding:3px">${img(t)}</span></div>`:c==">"?`<div class="m me">${sp}</div>`:`<div class=m>${img(a,"av")}${n?`<div><small class=nm>${n}</small>${sp}</div>`:sp}</div>`}).join("");
+const chat=(s,a,n)=>s.trim().split("\n").map(l=>{const c=l[0],t=l.slice(1),sp=`<span>${t}</span>`;return c=="#"?`<div class=tm>${t}</div>`:c=="~"?`<div class="m me"><span>${t} 📞</span></div>`:c=="!"?`<div class="m me"><span style="padding:3px">${img(t)}</span></div>`:c==">"?`<div class="m me">${sp}</div>`:`<div class=m>${img(a,"av")}${n?`<div><small class=nm>${n}</small>${sp}</div>`:sp}</div>`}).join("");
 const WX=[
 ["妈妈","10/29/IMG_5279.jpeg",`#星期一 20:34
 <女儿，不要长期做指甲，万一指甲变灰怎么办？
@@ -84,7 +84,7 @@ const WX=[
 #星期一 10:00
 <女儿，你是不是有什么事瞒着妈妈？你爸爸都和我说了。`],
 ["哥哥","10/30/IMG_5365.jpeg",`#星期二 8:45
->（发起电话，被拒绝）
+~对方已拒绝
 >画家，你什么时候可以接上我的电话，你妹现在需要倾诉对象
 #星期二 18:39
 <怎么了？
@@ -410,7 +410,7 @@ const EV={11:{17:["韩国语会话课 口头发表","外国语学院 304教室 1
 /* ===== 引擎 ===== */
 let S=[],H={};const ab=$("#ab"),ah=$("#ah");
 const pv=k=>{S.push(H[k]);draw()};
-function draw(){const v=S[S.length-1];ah.innerHTML=`<u onclick="back()">‹ ${S.length>1?"返回":"主屏幕"}</u><span>${v.t}</span><i></i>`;ab.innerHTML=(v.tab||"")?v.h+"":v.h;ab.className=v.c||"";if(v.tabs)ab.insertAdjacentHTML("beforeend",`<div class="tab tb">${v.tabs.map((x,i)=>`<div style="${i==v.i?"color:"+(v.ac||"#07c160")+";font-weight:600":""}" onclick="tb(${i})"><span style="font-size:20px">${x[1]}</span><br>${x[0]}</div>`).join("")}</div>`);if(v.in){ab.insertAdjacentHTML("beforeend",`<div class=inb><input id=ti placeholder="输入消息" onkeydown="if(event.key=='Enter')send()"><button onclick="send()">发送</button></div>`);ab.scrollTop=ab.scrollHeight}$("#ap").style.background="#fff"}
+function draw(){const v=S[S.length-1];$("#bt").innerHTML="";ah.innerHTML=`<u onclick="back()">‹ ${S.length>1?"返回":"主屏幕"}</u><span>${v.t}</span><i></i>`;ab.innerHTML=(v.tab||"")?v.h+"":v.h;ab.className=v.c||"";if(v.tabs)$("#bt").insertAdjacentHTML("beforeend",`<div class="tab tb">${v.tabs.map((x,i)=>`<div style="${i==v.i?"color:"+(v.ac||"#07c160")+";font-weight:600":""}" onclick="tb(${i})"><span style="font-size:20px">${x[1]}</span><br>${x[0]}</div>`).join("")}</div>`);if(v.in){$("#bt").insertAdjacentHTML("beforeend",`<div class=inb><input id=ti placeholder="输入消息" onkeydown="if(event.key=='Enter')send()"><button onclick="send()">发送</button></div>`);ab.scrollTop=ab.scrollHeight}$("#ap").style.background="#fff"}
 function send(){const i=$("#ti"),t=i.value.trim();if(!t)return;$(".ch").insertAdjacentHTML("beforeend",`<div class="m me"><span></span></div>`);$(".ch").lastChild.firstChild.textContent=t;i.value="";ab.scrollTop=ab.scrollHeight}
 function lk(e){const on=e.classList.toggle("on"),po=e.closest(".po");if(po){const c=po.querySelector(".lc");c.textContent=+c.dataset.n+(on?1:0);e.textContent=on?"♥":"♡"}else{e.closest(".pb").querySelector(".ml").style.display=on?"block":"none";e.textContent=on?"♥ 已赞":"♡ 赞"}}
 function cm(e){const c=e.closest(".po,.pb"),b=c.querySelector(".ci");if(b){b.remove();return}c.insertAdjacentHTML("beforeend",`<div class=ci><input placeholder="添加评论…" onkeydown="if(event.key=='Enter')cs(this)"><button onclick="cs(this.previousElementSibling)">发送</button></div>`);c.querySelector(".ci input").focus()}
@@ -425,16 +425,17 @@ function open_(id){S=[A[id]()];$("#ap").classList.remove("hid");draw();$("#sb").
 function home(){$("#ap").classList.add("hid");$("#sb").classList.remove("d");$("#hb").classList.remove("d");S=[]}
 const row=(av,t,s,k,x="")=>`<div class=row onclick="pv('${k}')">${av}<div class=t><b>${t}</b><small>${s}</small></div>${x}</div>`;
 const COVER=`<div style="position:relative;height:250px;margin-bottom:36px;background:#888 url(${W}10/30/IMG_5368.jpeg) center/cover"><div style="position:absolute;right:14px;bottom:-28px;display:flex;align-items:center;gap:10px"><b style="color:#fff;text-shadow:0 1px 3px #000">dhisobdizcc/9120</b>${img("10/29/IMG_5278.jpeg","av").replace("<img","<img style='width:62px;height:62px'")}</div></div>`;
+const XT=[" 수신거부 080-123-4567"," 수신거부 080-234-5678",""," 데이터 추가는 앱에서 신청하세요."];
 const A={
 wx(){WX.forEach((c,i)=>H["w"+i]={t:c[0],in:1,h:`<div class=ch>${chat(c[2],c[1])}</div>`});
-H.mo={t:"朋友圈",h:COVER+MO.map(m=>`<div class=pp>${img(m[1],"av")}<div class=pb><b style="color:#576b95">${m[0]}</b><p style="margin:4px 0">${m[2]}</p>${m[3].split(",").filter(x=>x).map(p=>img(p,"pic")).join("")}<div style="color:#888;font-size:13px;white-space:pre-line;margin-top:6px">${m[4]}</div><div class=ml style="display:none;color:#576b95;font-size:13px">♥ dhisobdizcc/9120</div><div class=ac><span onclick="lk(this)">♡ 赞</span><span onclick="cm(this)">💬 评论</span></div></div></div>`).join("")};
+H.mo={t:"朋友圈",h:COVER+MO.map(m=>`<div class=pp>${img(m[1],"av")}<div class=pb><b style="color:#576b95">${m[0]}</b><p style="margin:4px 0">${m[2]}</p>${m[3].split(",").filter(x=>x).map(p=>img(p,"pic")).join("")}<div style="color:#576b95;font-size:16px;line-height:1.55;white-space:pre-line;margin-top:6px">${m[4]}</div><div class=ml style="display:none;color:#576b95;font-size:16px">♥ dhisobdizcc/9120</div><div class=ac><span onclick="lk(this)">♡ 赞</span><span onclick="cm(this)">💬 评论</span></div></div></div>`).join("")};
 const L=()=>["微信",WX.map((c,i)=>row(img(c[1],"av"),c[0],c[2].trim().split("\n").pop().slice(1),"w"+i)).join("")],C=()=>["通讯录",WX.map(c=>`<div class=row>${img(c[1],"av")}<b>${c[0]}</b></div>`).join("")],F=()=>["发现",`<div onclick="pv('mo')" class=row><span style="font-size:22px">🌄</span><b>朋友圈</b><span style="flex:1;text-align:right;color:#aaa">›</span></div>`],Me=()=>["我",`<div class=row style="padding:30px 16px">${img("10/29/IMG_5278.jpeg","av")}<div class=t><b style="font-size:19px">dhisobdizcc/9120</b><small>微信号：dhisobdizcc9120</small></div></div>`];
 const q=L();return{t:q[0],h:q[1],tabs:[["微信","💬",L],["通讯录","👥",C],["发现","🧭",F],["我","👤",Me]],i:0}},
 kk(){KK.forEach((c,i)=>H["k"+i]={t:c[0],c:"kk",in:1,h:`<div class=ch>${chat(c[2],KD,c[0])}</div>`});
 const T=["오후 10:45","11월 15일","11월 13일"],kv=()=>img(KD,"av kav");
 const Ch=()=>["채팅",KK.map((c,i)=>row(kv(),c[0],c[2].trim().split("\n").pop().slice(1),"k"+i,`<small style="align-self:flex-start">${T[i]}</small>`)).join("")],Fr=()=>["친구",`<div class=row>${kv()}<b>나</b></div><small style="padding:6px 14px;display:block;background:#f5f5f5">친구 ${KK.length}</small>`+KK.map(c=>`<div class=row>${kv()}<b>${c[0]}</b></div>`).join("")];
 const q=Ch();return{t:q[0],h:q[1],tabs:[["친구","👤",Fr],["채팅","💬",Ch]],i:1,ac:"#000"}},
-sms(){return{t:"信息",h:SMS.map(s=>`<div class=row><span class=dot></span><div class=t><b>${s[0]}</b><small style="white-space:normal">${s[1]}</small></div><small>${s[2]}</small></div>`).join("")}},
+sms(){SMS.forEach((c,i)=>H["s"+i]={t:c[0],h:`<div class=ch style="background:#fff;min-height:100%"><div class=tm>${c[2]}${i==0?" 4:48":""}</div><div class=m><span style="background:#e9e9eb;border-radius:18px;padding:10px 14px">${c[1]+XT[i]}</span></div></div>`});return{t:"信息",h:SMS.map((c,i)=>`<div class=row onclick="pv('s${i}')"><span class=dot></span><div class=t><b>${c[0]}</b><small style="white-space:normal">${c[1]}</small></div><small>${c[2]}</small></div>`).join("")}},
 tel(){return{t:"最近通话",h:CALLS.map(c=>`<div class=row><div class=t><b style="color:${c[3]?"#ff3b30":"#000"}">${c[0]}</b><small>${c[1]}</small></div><small>${c[2]}</small></div>`).join("")}},
 note(){NOTES.forEach((n,i)=>H["n"+i]={t:"备忘录",h:`<div class=nb><b style="font-size:20px">${n[0]}</b>\n${n[1]}</div>`});return{t:"备忘录",h:NOTES.map((n,i)=>row("",n[0],n[1].split("\n")[0],"n"+i)).join("")}},
 mus(){return{t:"音乐",h:MUS.map(m=>`<div class=row>${img(m[2]+".jpeg","cv")}<div class=t><b>${m[0]}</b><small>${m[1]}</small></div>▶️</div>`).join("")}},
@@ -446,7 +447,7 @@ Object.entries(EV[m]).forEach(([d,e])=>h+=`<div class=ev><b>${m}月${d}日 ${e[0
 /* 主屏幕 */
 const IC={cal:["日历","#fff","📅"],ig:["Instagram","linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7)","📷"],mus:["音乐","linear-gradient(#fa5c7c,#f0314d)","🎵"],pho:["照片","#fff","🌸"],note:["备忘录","#ffd60a","📝"],nav:["NAVER","#03c75a","N"],wx:["微信","#07c160","💬"],kk:["KakaoTalk","#fee500","🗨️"],tel:["电话","#34c759","📞"],sms:["信息","#34c759","✉️"]};
 const mk=k=>`<div class=ic onclick="open_('${k}')"><div style="background:${IC[k][1]}">${IC[k][2]}</div>${IC[k][0]}</div>`;
-$("#hm").innerHTML=["cal ig mus pho","note nav"].map(p=>`<div class=pg>${p.split(" ").map(mk).join("")}</div>`).join("");$("#hm").onscroll=()=>{const i=Math.round($("#hm").scrollLeft/$("#hm").clientWidth);[...$("#pgd").children].forEach((d,j)=>d.style.opacity=i==j?1:.4)};let dx=null;$("#hm").onpointerdown=e=>dx=e.clientX;$("#hm").onpointerup=e=>{if(dx!==null&&Math.abs(e.clientX-dx)>50){const h=$("#hm");h.scrollTo({left:h.scrollLeft+(dx>e.clientX?1:-1)*h.clientWidth,behavior:"smooth"})}dx=null};$("#dk").innerHTML="wx kk tel sms".split(" ").map(mk).join("");
+$("#hm").innerHTML=["cal ig mus pho","note nav"].map(p=>`<div class=pg>${p.split(" ").map(mk).join("")}</div>`).join("");$("#hm").onscroll=()=>{const i=Math.round($("#hm").scrollLeft/$("#hm").clientWidth);[...$("#pgd").children].forEach((d,j)=>d.style.opacity=i==j?1:.4)};let dx=null;$("#dk").innerHTML="wx kk tel sms".split(" ").map(mk).join("");
 document.addEventListener("click",e=>{const t=e.target;if(t.tagName=="IMG"&&t.closest("#ab")&&!t.classList.contains("av")){$("#zm img").src=t.src;$("#zm").classList.remove("hid")}else if(t.closest("#zm"))$("#zm").classList.add("hid")});
 /* 锁屏与密码 */
 let pin="";const dots=()=>[...$("#ds").children].forEach((d,i)=>d.className=i<pin.length?"f":"");
@@ -454,5 +455,8 @@ $("#pd").innerHTML=[1,2,3,4,5,6,7,8,9,"",0,"⌫"].map(k=>`<b class="${k===""?"n"
 $("#pd").onclick=e=>{const k=e.target.dataset.k;if(k===undefined||k==="")return;if(k=="⌫")pin=pin.slice(0,-1);else if(pin.length<4)pin+=k;dots();
 if(pin.length==4)setTimeout(()=>{if(pin==PASS){$("#lkS").classList.add("hid");$("#hmS").classList.remove("hid")}else{$("#ds").classList.add("sh");setTimeout(()=>{$("#ds").classList.remove("sh");pin="";dots()},400)}},150)};
 $("#lk").onclick=()=>{$("#lk").classList.add("hid");$("#pc").classList.remove("hid")};
-$("#hb").onclick=()=>{if(!$("#ap").classList.contains("hid"))home();else if(!$("#hmS").classList.contains("hid")){$("#hmS").classList.add("hid");$("#lkS").classList.remove("hid");$("#lk").classList.remove("hid");$("#pc").classList.add("hid");pin="";dots()}};
+const goHome=()=>{if(!$("#ap").classList.contains("hid"))home();else if(!$("#hmS").classList.contains("hid")){$("#hmS").classList.add("hid");$("#lkS").classList.remove("hid");$("#lk").classList.remove("hid");$("#pc").classList.add("hid");pin="";dots()}};
+const hb=$("#hb");let hx,hy;
+hb.onpointerdown=e=>{hx=e.clientX;hy=e.clientY;hb.setPointerCapture(e.pointerId)};
+hb.onpointerup=e=>{const dx=e.clientX-hx,dy=e.clientY-hy;if(Math.abs(dx)>30&&Math.abs(dx)>Math.abs(dy)){if($("#ap").classList.contains("hid")&&!$("#hmS").classList.contains("hid")){const h=$("#hm");h.scrollTo({left:h.scrollLeft+(dx<0?1:-1)*h.clientWidth,behavior:"smooth"})}}else if(dy<-30||(Math.abs(dx)<8&&Math.abs(dy)<8))goHome()};
 </script></body></html>
